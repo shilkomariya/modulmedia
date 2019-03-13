@@ -1,0 +1,19 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+{% include "layouts/header.html" %}
+<div class="main-content">
+    <section>
+	<div class="container">
+	    <h1>ModulMedia</h1>
+	</div>
+    </section>
+</div>
+{% include "layouts/footer.html" %}
+{% endblock %}

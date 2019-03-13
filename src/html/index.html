@@ -1,0 +1,95 @@
+{#
+Nunjucks Templating!
+Homepage: https://mozilla.github.io/nunjucks/
+Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% extends 'layouts/application.html' %}
+
+{% block content %}
+{% include "layouts/header.html" %}
+<div class="main-content home">
+    <section id="home-1" class="menu-light bg-red scroll-section">
+	<div class="container">
+	    <div class="row">
+		<div class="col-1-2">
+		    <h1 class="section-heading lg">ModulMedia</h1>
+		    <p class="description">Der One-Stop-Shop für intelligente Lösungen in der digitalen Medienwirtschaft</p>
+		</div>
+		<div class="col-1-2">
+		    <div class="mb-1">
+			<h2>Software Produkte</h2>
+			<p><a href="#">Integrated Audience</a></p>
+		    </div>
+		    <div class="mb-1">
+			<h2>IT-Entwicklung</h2>
+			<p><a href="#">Front-End</a></p>
+			<p><a href="#">Back-End</a></p>
+			<p><a href="#">Mobile</a></p>
+		    </div>
+		    <div class="mb-1">
+			<h2>Grafik & 2D Motion-Design</h2>
+			<p><a href="#">Infokarten</a></p>
+			<p><a href="#">2D Motion-Design</a></p>
+			<p><a href="#">Infografiken</a></p>
+		    </div>
+		    <div>
+			<h2>Outstaffing</h2>
+			<p><a href="#">Kiew Outstaffing</a></p>
+		    </div>
+		</div>
+	    </div>
+	    <div class="next-slide">
+		<div class="text">Kunden und ​Projekte​</div>
+	    </div>
+	</div>
+    </section>
+    <section class="menu-light bg-red scroll-section">
+	<div class="container">
+	    <h2 class="section-heading md">Kunden und Projekte​</h2>
+	    <div class="projects">
+		<ul>
+		    <li><a href="#" target="_blank"><img src="images/projects/01.jpg" alt="01"></a></li>
+		    <li><a href="#" target="_blank"><img src="images/projects/02.png" alt="02"></a></li>
+		    <li><a href="#" target="_blank"><img src="images/projects/03.png" alt="03"></a></li>
+		    <li><a href="#" target="_blank"><img src="images/projects/04.png" alt="04"></a></li>
+		    <li><a href="#" target="_blank"><img src="images/projects/05.png" alt="05"></a></li>
+		    <li><a href="#" target="_blank"><img src="images/projects/06.png" alt="06"></a></li>
+		    <li><a href="#" target="_blank"><img src="images/projects/07.png" alt="07"></a></li>
+		    <li><a href="#" target="_blank"><img src="images/projects/08.png" alt="08"></a></li>
+		    <li><a href="#" target="_blank"><img src="images/projects/09.png" alt="09"></a></li>
+		    <li><a href="#" target="_blank"><img src="images/projects/10.png" alt="10"></a></li>
+		    <li><a href="#" target="_blank"><img src="images/projects/11.png" alt="11"></a></li>
+		    <li><a href="#" target="_blank"><img src="images/projects/12.png" alt="12"></a></li>
+		</ul>
+	    </div>
+	</div>
+    </section>
+    <section class="menu-light bg-red scroll-section">
+	<div class="container">
+	    <h2 class="section-heading md">Referenzen</h2>
+	    <div class="owl-carousel owl-theme">
+		<div class="item">
+		    <div class="quote">
+			Lorem ipsum sapien bibendum ultricies nec duis pellentesque urna arcu cursus, morbi ut sapien maecenas vitae: nibh quisque. Auctor, mauris gravida mattis, risus non nibh ut pellentesque adipiscing leo duis. Porta bibendum integer pharetra proin sit sapien arcu vulputate amet.
+		    </div>
+		    <div class="author">Edmonda Hrothgar</div>
+		</div>
+		<div class="item">
+		    <div class="quote">
+			Lorem ipsum sapien bibendum ultricies nec duis pellentesque urna arcu cursus, morbi ut sapien maecenas vitae: nibh quisque. Auctor, mauris gravida mattis, risus non nibh ut pellentesque adipiscing leo duis. Porta bibendum integer pharetra proin sit sapien arcu vulputate amet.
+		    </div>
+		    <div class="author">Edmonda Hrothgar</div>
+		</div>
+		<div class="item">
+		    <div class="quote">
+			Lorem ipsum sapien bibendum ultricies nec duis pellentesque urna arcu cursus, morbi ut sapien maecenas vitae: nibh quisque. Auctor, mauris gravida mattis, risus non nibh ut pellentesque adipiscing leo duis. Porta bibendum integer pharetra proin sit sapien arcu vulputate amet.
+		    </div>
+		    <div class="author">Edmonda Hrothgar</div>
+		</div>
+	    </div>
+	</div>
+    </section>
+</div>
+{% include "layouts/footer.html" %}
+{% endblock %}
