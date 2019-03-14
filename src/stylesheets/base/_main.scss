@@ -33,17 +33,21 @@ body::-webkit-scrollbar-thumb {
     padding-right: 15px;
     padding-left: 15px;
 }
-@media (min-width:992px){
+@media (min-width:768px){
     .col-1-2 {
-	-ms-flex: 0 0 50%;
 	flex: 0 0 50%;
 	max-width: 50%;
+    }
+    .col-1-3 {
+	flex: 0 0 33.3333333333%;
+	max-width: 33.3333333333%;
     }
 }
 .mb-1{
     margin-bottom: 1rem;
 }
 .site-header{
+    z-index: 999;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -56,13 +60,16 @@ body::-webkit-scrollbar-thumb {
 	margin: 0;
 	li+li{
 	    margin-left: 1.5rem;
+	    @media (min-width:768px) and (max-width:991px) {
+		margin-left: 1rem;
+	    }
 	}
     }
     .nav-item{
 	font-family: $font-secondary;
 	font-weight: bold;
 	font-style: normal;
-	font-size: 16px;
+	font-size: rem(16px);
 	letter-spacing: 1.2px;
 	color: $black;
 	text-transform: uppercase;
@@ -74,20 +81,129 @@ body::-webkit-scrollbar-thumb {
 	.active .nav-item{
 	color: $gray;
     }
+    .logo-black,
     .logo-white{
 	display: inline-block;
 	width: 144px;
 	height: 18px;
+    }
+    .logo-white{
+	display: none;
+    }
+    &.light{
+	.logo-black{
+	    display: none;
+	}
+	.logo-white{
+	    display: inline-block;
+	}
+    }
+    #main-menu-btn{
+	display: none;
+	padding: 0;
+	background: none;
+	border: 0 none;
+	z-index: 10;
+	.icon{
+	    display: inline-block;
+	    width: 25px;
+	    height: 20px;
+	    position: relative;
+	    top: 4px;
+	    i{
+		display: block;
+		position: absolute;
+		height: 2px;
+		width: 100%;
+		background-color: #fff;
+		left: 0;
+		transform: rotate(0deg);
+		transition: .25s ease-in-out;
+		&:nth-child(1){
+		    top: 0;
+		}
+		&:nth-child(2),
+		    &:nth-child(3){
+		    top: 8px;
+		}
+		&:nth-child(4){
+		    top: 16px;
+		}
+	    }
+	}
+	//chkdsk c:/f
+	.btn-text{
+	    color: #fff;
+	}
+	&.open{
+	    .icon{
+		i{
+		    &:nth-child(1){
+			top: 9px;
+			width: 0;
+			left: 50%;
+		    }
+		    &:nth-child(2){
+			transform: rotate(45deg);
+		    }
+		    &:nth-child(3){
+			transform: rotate(-45deg);
+		    }
+		    &:nth-child(4){
+			top: 9px;
+			width: 0;
+			left: 50%;
+		    }
+		}
+	    }
+	}
+    }
+    @media (max-width:767px){
+	padding: 1rem;
+	#main-menu-btn{
+	    display: block;
+	}
+	.navigation{
+	    display: none;
+	    position: absolute;
+	    z-index: 9999;
+	    left: 0;
+	    right: 0;
+	    top: 59px;
+	    bottom: 0;
+	    .nav{
+		background-color: #000;
+		flex-direction: column;
+		li{
+		    margin-left: 1.5rem;
+		    margin-bottom: .5rem;
+		}
+	    }
+	}
+    }
+    .open-menu &{
+	background-color: #000;
     }
 }
 
 
 /*Sections*/
 .scroll-section{
+    position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     padding: rem(100px 0);
-    overflow: hidden;
+    @media (max-width:991px){
+	padding: 4rem 0;
+    }
+    @media (max-width:767px){
+	padding: 3rem 0;
+    }
+    img{
+	max-width: 100%;
+	height: auto;
+    }
 }
 .next-slide{
     position: absolute;
@@ -98,6 +214,10 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
     cursor: pointer;
     transform: rotate(-90deg) translate(5px,-8px);
+    @media (max-width:767px){
+	bottom: 15%;
+	left: 80%;
+    }
     .text{
 	font-size: rem(16px);
 	color: #B5B5B5;
@@ -120,11 +240,24 @@ body::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, #0C0404 0%, #210D0D 100%);
 }
 .section-heading{
+    font-size: rem(56px);
     &.lg{
 	font-size: rem(130px);
+	@media (max-width:991px){
+	    font-size: 5rem;
+	}
+	@media (max-width:767px){
+	    font-size: 3rem;
+	}
     }
     &.md{
 	font-size: rem(96px);
+	@media (max-width:991px){
+	    font-size: 4rem;
+	}
+	@media (max-width:767px){
+	    font-size: 2rem;
+	}
     }
 }
 .home{
@@ -158,6 +291,12 @@ body::-webkit-scrollbar-thumb {
     h2{
 	font-size: rem(60px);
 	margin-bottom: 0;
+	@media (max-width:991px){
+	    font-size: 3rem;
+	}
+	@media (max-width:767px){
+	    font-size: 2rem;
+	}
     }
     p{
 	margin-bottom: 0;
@@ -172,6 +311,10 @@ body::-webkit-scrollbar-thumb {
 #home-3{
     .container{
 	max-width: 1000px;
+	background-image: url("data:image/svg+xml,%3Csvg width='480' height='480' viewBox='0 0 480 480' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M435 240H360V180C360 146.906 386.906 120 420 120H427.5C439.969 120 450 109.969 450 97.5V52.5C450 40.0312 439.969 30 427.5 30H420C337.125 30 270 97.125 270 180V405C270 429.844 290.156 450 315 450H435C459.844 450 480 429.844 480 405V285C480 260.156 459.844 240 435 240ZM165 240H90V180C90 146.906 116.906 120 150 120H157.5C169.969 120 180 109.969 180 97.5V52.5C180 40.0312 169.969 30 157.5 30H150C67.125 30 0 97.125 0 180V405C0 429.844 20.1562 450 45 450H165C189.844 450 210 429.844 210 405V285C210 260.156 189.844 240 165 240Z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='240' y1='30' x2='240' y2='450' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23DA0917' stop-opacity='0.15'/%3E%3Cstop offset='1' stop-color='%23DA0917' stop-opacity='0.05'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-size: rem(480px 480px);
     }
 }
 .projects{
@@ -184,6 +327,16 @@ body::-webkit-scrollbar-thumb {
 	margin: rem(0 -4px);
 	li{
 	    padding: rem(4px);
+	    flex: 0 0 16.66666666666667%;
+	    max-width: 16.66666666666667%;
+	    @media (min-width:480px) and (max-width:991px) {
+		flex: 0 0 25%;
+		max-width: 25%;
+	    }
+	    @media (max-width:479px) {
+		flex: 0 0 50%;
+		max-width: 50%;
+	    }
 	}
     }
 }
@@ -194,6 +347,9 @@ body::-webkit-scrollbar-thumb {
 	font-weight: 300;
 	font-size: rem(32px);
 	margin-bottom: 2rem;
+	@media (max-width:767px){
+	    font-size: 1.3rem;
+	}
     }
     .author{
 	font-family: $font-secondary;
@@ -201,6 +357,28 @@ body::-webkit-scrollbar-thumb {
 	font-size: rem(20px);
     }
 }
+.map-responsive {
+    padding-bottom: 100%;
+    height: 0;
+    border-radius: 50%;
+}
+.contact-info{
+    margin-top: -6rem;
+    position: relative;
+    z-index: 10;
+    h2{
+	font-size: rem(44px);
+	margin-bottom: .5rem;
+    }
+    h3{
+	font-size: rem(26px);
+	text-transform: none;
+    }
+    a{
+	color: $black;
+    }
+}
+
 /*Footer*/
 .site-footer{
     position: fixed;

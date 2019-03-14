@@ -1,6 +1,12 @@
 
 +function ($) {
 
+    $("#main-menu-btn").on("click", function () {
+	$(this).toggleClass('open');
+	$('body').toggleClass('open-menu');
+	$('.navigation').toggle();
+    });
+
     function setHeaderClass() {
 	if ($.scrollify.current().hasClass("menu-light")) {
 	    $(".site-header").addClass("light");
