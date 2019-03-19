@@ -157,4 +157,20 @@
 	});
     });
 
+    $(".video-wrp").hover(function () {
+	$video = $(this).children("video")[0];
+	$line = $(this).find(".progress .line");
+	$video.play();
+	$(this).addClass('hover');
+	$video.ontimeupdate = function () {
+	    $percentage = ($video.currentTime / $video.duration) * 100;
+	    $line.css("width", $percentage + "%");
+	};
+    }, function () {
+	var el = $(this).children("video")[0];
+	el.pause();
+	el.currentTime = 0;
+	$(this).removeClass('hover');
+    });
+
 }(jQuery);
