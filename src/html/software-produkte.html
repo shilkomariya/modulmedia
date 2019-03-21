@@ -12,10 +12,28 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <section id="software-1" class="menu-light bg-blue scroll-section">
 	<div class="inner">
 	    <div class="container">
-		<h1 class="section-heading lg">Integrated audience</h1>
+		<div class="circles">
+		    <div class="software__intro-circle-grey"></div>
+                    <div class="software__intro-circle-grey-small"></div>
+                    <div class="software__intro-circle-grey-small-left"></div>
+                    <div class="software__intro-circle-grey-small-right"></div>
+                    <div class="software__intro-circle"></div>
+                    <div class="software__intro-circle-small"></div>
+                    <div class="software__intro-circle-extra-small"></div>
+                    <div class="software__intro-circle-extra-small-top"></div>
+		</div>
+		<div class="animation">
+		    <h1 class="section-heading lg">Integrated audience</h1>
+		</div>
 		<div class="intro-description">
-		    <div class="text"><h3>Software</h3></div>
-		    <div class="logo"><img src="images/ina_logo.png" alt="INA"></div>
+		    <div class="text">
+			<div class="animation">
+			    <h3>Software</h3>
+			</div>
+		    </div>
+		    <div class="animation">
+			<div class="logo"><img src="images/ina_logo.png" alt="INA"></div>
+		    </div>
 		</div>
 		<div class="next-slide">
 		    <div class="text">Erfahren Sie mehr</div>
@@ -26,21 +44,32 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <section id="software-2" class="scroll-section">
 	<div class="inner">
 	    <div class="container">
-		<div class="video-wrp">
-		    <div class="player-overlay">
-			<video>
-			    <source src="/video/ina-animation.mp4" type="video/mp4">
-			</video>
+		<div class="animation">
+		    <div class="video-wrp">
+			<div class="player-overlay">
+			    <video>
+				<source src="/video/ina-animation.mp4" type="video/mp4">
+			    </video>
+			</div>
 		    </div>
 		</div>
 		<div class="content">
-		    <p>INA ist die perfekte White-Label-Lösung für die nahtlose Integration ihrer Community oder Leserschaft, um nutzergenerierte Inhalte (UGC) zu erhalten.</p>
-		    <p>Mit INA können Sie Ihrer Leserschaft eine APP und eine WEBSITE zur Verfügung stellen, die gewährleistet, dass Sie von Ihren Lesern umgehend mit Content (Livestreams, Fotos, Videos und Artikeln) versorgt werden.</p>
-		    <p>Die INA-Software ist auch eine ideale Lösung für Medienunternehmen, die ihre Journalisten mit einer Interaktionsplattform ausstatten wollen, da sie das perfekte Tool zur Übertragung von Livestreams, Verwaltung von Content und Koordination von App-Usern darstellt.</p>
+		    <div class="animation">
+			<p>INA ist die perfekte White-Label-Lösung für die nahtlose Integration ihrer Community oder Leserschaft, um nutzergenerierte Inhalte (UGC) zu erhalten.</p>
+		    </div>
+		    <div class="animation">
+			<p>Mit INA können Sie Ihrer Leserschaft eine APP und eine WEBSITE zur Verfügung stellen, die gewährleistet, dass Sie von Ihren Lesern umgehend mit Content (Livestreams, Fotos, Videos und Artikeln) versorgt werden.</p>
+		    </div>
+		    <div class="animation">
+			<p>Die INA-Software ist auch eine ideale Lösung für Medienunternehmen, die ihre Journalisten mit einer Interaktionsplattform ausstatten wollen, da sie das perfekte Tool zur Übertragung von Livestreams, Verwaltung von Content und Koordination von App-Usern darstellt.</p>
+		    </div>
+		    <div class="animation">
+		    </div>
 		</div>
 	    </div>
-	</div>
     </section>
 </div>
 {% include "layouts/footer.html" %}
+<script src="/javascripts/animations/software-animations.js"></script>
+<script src="/javascripts/animations/events.js"></script>
 {% endblock %}

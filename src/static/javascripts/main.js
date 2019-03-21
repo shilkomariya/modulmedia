@@ -103,28 +103,6 @@
 	$('.navigation').toggle();
     });
 
-    function setHeaderClass() {
-	if ($.scrollify.current().hasClass("menu-light")) {
-	    $(".site-header").fadeOut('slow').addClass("light").fadeIn('slow');
-	} else {
-	    $(".site-header").fadeOut('slow').removeClass("light").fadeIn('slow');
-	}
-    }
-
-    $(function () {
-	$.scrollify({
-	    section: ".scroll-section",
-	    sectionName: false,
-	    before: function () {
-		setHeaderClass();
-	    },
-	    afterRender: function () {
-		setHeaderClass();
-	    }
-	});
-    });
-
-
     $(".next-slide").on("click", function () {
 	$.scrollify.next();
     });

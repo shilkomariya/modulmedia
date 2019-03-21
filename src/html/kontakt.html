@@ -12,48 +12,81 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     <section class="scroll-section">
 	<div class="inner">
 	    <div class="container">
-		<h1 class="section-heading">KONTAKT</h1>
+		<div class="animation">
+		    <h1 class="section-heading">KONTAKT</h1>
+		</div>
 		<div class="row">
 		    <div class="col-1-3">
-			<div id="mapOne" class="map-responsive"></div>
+			<div class="animation">
+			    <div id="mapOne" class="map-responsive"></div>
+			</div>
 			<div class="contact-info">
-			    <h2>Wien</h2>
-			    <p>Landstraßer-Hauptstraße 76​<br>
-				1030 Wien​<br>
-				Österreich​</p>
-			    <h3>Senden Sie eine Anfrage</h3>
-			    <p><a href="mailto:officewien@modulmedia.info​">officewien@modulmedia.info​</a><br>
-				<a href="tel:+43720884005​">+43 720 884 005​</a></p>
+			    <div class="animation">
+				<div class="s-1">
+				    <h2>Wien</h2>
+				    <p>Landstraßer-Hauptstraße 76​<br>
+					1030 Wien​<br>
+					Österreich​</p>
+				</div>
+			    </div>
+			    <div class="animation">
+				<div class="s-2">
+				    <h3>Senden Sie eine Anfrage</h3>
+				    <p><a href="mailto:officewien@modulmedia.info​">officewien@modulmedia.info​</a><br>
+					<a href="tel:+43720884005​">+43 720 884 005​</a></p>
+				</div>
+			    </div>
 			</div>
 		    </div>
 		    <div class="col-1-3">
-			<div id="mapTwo" class="map-responsive"></div>
+			<div class="animation">
+			    <div id="mapTwo" class="map-responsive"></div>
+			</div>
 			<div class="contact-info">
-			    <h2>Kiew I​</h2>
-			    <p>Yaroslavlavska Straße 58​<br>
-				04071 Kiew​<br>
-				Ukraine</p>
-			    <h3>Senden Sie eine Anfrage</h3>
-			    <p><a href="mailto:officekiew1@modulmedia.info​">officekiew1@modulmedia.info​</a><br>
-				<a href="tel:+380443623296">+38 044 362 32 96</a></p>
+			    <div class="animation">
+				<div class="s-1">
+				    <h2>Kiew I​</h2>
+				    <p>Yaroslavlavska Straße 58​<br>
+					04071 Kiew​<br>
+					Ukraine</p>
+				</div>
+			    </div>
+			    <div class="animation">
+				<div class="s-2">
+				    <h3>Senden Sie eine Anfrage</h3>
+				    <p><a href="mailto:officekiew1@modulmedia.info​">officekiew1@modulmedia.info​</a><br>
+					<a href="tel:+380443623296">+38 044 362 32 96</a></p>
+				</div>
+			    </div>
 			</div>
 		    </div>
 		    <div class="col-1-3">
-			<div id="mapThree" class="map-responsive"></div>
+			<div class="animation">
+			    <div id="mapThree" class="map-responsive"></div>
+			</div>
 			<div class="contact-info">
-			    <h2>Kiew II​​</h2>
-			    <p>Sportivnaya Ploshchad, 1A​<br>
-				01023 Kiew​<br>
-				Ukraine</p>
-			    <h3>Senden Sie eine Anfrage</h3>
-			    <p><a href="mailto:officekiew2@modulmedia.info​">officekiew2@modulmedia.info​</a><br>
-				<a href="tel:+380443602590​">+38 044 360 25 90​</a></p>
+			    <div class="animation">
+				<div class="s-1">
+				    <h2>Kiew II​​</h2>
+				    <p>Sportivnaya Ploshchad, 1A​<br>
+					01023 Kiew​<br>
+					Ukraine</p>
+				</div>
+			    </div>
+			    <div class="animation">
+				<div class="s-2">
+				    <h3>Senden Sie eine Anfrage</h3>
+				    <p><a href="mailto:officekiew2@modulmedia.info​">officekiew2@modulmedia.info​</a><br>
+					<a href="tel:+380443602590​">+38 044 360 25 90​</a></p>
+				</div>
+			    </div>
 			</div>
 		    </div>
 		</div>
 	    </div>
 	</div>
-    </section>
+</div>
+</section>
 </div>
 {% include "layouts/footer.html" %}
 <script>function initMap() {
@@ -147,4 +180,6 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     }
 </script>
 <script async defer="defer" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDgwoMH7M78pTi8h45rjs_QwwTR1pYIwQM&callback=initMap&language=de"></script>
+<script src="/javascripts/animations/contact-animations.js"></script>
+<script src="/javascripts/animations/events.js"></script>
 {% endblock %}

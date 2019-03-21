@@ -8,10 +8,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     var tl = new TimelineMax();
     // set intro animation timeline
     tl.to(".preloader", 1, {scaleX: 0, ease: Power4.easeInOut}).set(".preloader", {x: "-100%", scaleX: 1})
-	    .to(".section-heading", 1.5, {y: "0%", ease: Power4.easeOut}, "-=0.25")
-	    .to(".p-1", 1, {y: "0%", ease: Power4.easeOut}, "-=0.5")
-	    .to(".p-2", 1, {y: "0%", ease: Power4.easeOut}, "-=0.5")
-	    .to(".p-3", 1, {y: "0%", ease: Power4.easeOut}, "-=0.5");
+	    .to(".section-heading", .7, {y: "0%", ease: Power4.easeOut}, "-=0.25")
+	    .staggerTo(".img *", .7, {y: "0%", ease: Power4.easeOut}, 0.2, "-=0.5")
+	    .staggerTo(".text p", .7, {y: "0%", ease: Power4.easeOut}, 0.3, "-=0.25");
 
     if (window.innerWidth > 860) {
 	var setCircleYoYo = function setCircleYoYo() {

@@ -22,26 +22,32 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 		    <div class="about__intro-circle-extra-small"></div>
 		    <div class="about__intro-circle-extra-small-top"></div>
 		</div>
-		<div class="animation-y">
+		<div class="animation">
 		    <h1 class="section-heading md">Über uns</h1>
 		</div>
 		<div class="content">
 		    <div class="img">
-			<div class="avatar">
-			    <img src="/media/GabrieleDavis.jpg" alt="Gabriele Davies">
+			<div class="animation">
+			    <div class="avatar">
+				<img src="/media/GabrieleDavis.jpg" alt="Gabriele Davies">
+			    </div>
 			</div>
-			<h3>Gabriele Davies</h3>
-			<p>Geschäftsführer Modul Media GmbH</p>
+			<div class="animation">
+			    <h3>Gabriele Davies</h3>
+			</div>
+			<div class="animation">
+			    <p>Geschäftsführer Modul Media GmbH</p>
+			</div>
 		    </div>
 		    <div class="text">
-			<div class="animation-y">
+			<div class="animation">
 			    <p class="p-1">Die Modul Media LLC Kiew wurde im Jahre 2016 in Kiew gegründet und war ursprünglich als Projektgesellschaft für ein umfangreiches Medien-IT-Projekt konzipiert, das in Deutschland aufgrund des ausgeprägten Informatiker-Mangels nicht in der gesetzten Frist implementiert werden konnte. Durch die positiven Erfahrungen, die im Zuge der Projektimplementierung in Kiew gemacht wurden, hat man sich nach der erfolgreichen Umsetzung des ursprünglichen Projekts dazu entschlossen, Dienstleistungen im Segment der IT-Entwicklung, des Outstaffings und des grafischen Designs auch für Kunden in Österreich und Deutschland anzubieten.</p>
 			</div>
-			<div class="animation-y">
+			<div class="animation">
 			    <p class="p-2">
 				Die Dienstleistungspalette orientierte sich dabei ausschließlich an den bereits zuvor für das Medienprojekt erbrachten Leistungen, also den Bereichen, in dem in den letzten Jahren schon die Kernkompetenzen aufgebaut worden waren, da gerade hier sowohl die Expertise als auch das Personal vorhanden waren.</p>
 			</div>
-			<div class="animation-y">
+			<div class="animation">
 			    <p class="p-3">
 				In weiterer Folge wurde im Jahre 2018 in Österreich die Modul Media GmbH gegründet, um einerseits Kunden eine Abwicklungsstelle in Westeuropa zur Verfügung zu stellen und andererseits eine lokale Kundenbetreuung und ein zentrales Marketing vor Ort zu etablieren.
 			    </p>
@@ -53,5 +59,6 @@ Docs: https://mozilla.github.io/nunjucks/api.html
     </section>
 </div>
 {% include "layouts/footer.html" %}
-<!---<script src="/javascripts/animations/about-animations.js"></script>-->
+<script src="/javascripts/animations/about-animations.js"></script>
+<script src="/javascripts/animations/events.js"></script>
 {% endblock %}

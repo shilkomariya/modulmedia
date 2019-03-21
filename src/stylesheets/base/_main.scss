@@ -255,6 +255,7 @@ body::-webkit-scrollbar-thumb {
 }
 .next-slide{
     position: absolute;
+    opacity: 0;
     z-index: 1;
     width: auto;
     bottom: 15%;
@@ -417,6 +418,7 @@ body::-webkit-scrollbar-thumb {
 	flex-wrap: wrap;
 	margin: rem(0 -4px);
 	li{
+	    opacity: 0;
 	    padding: rem(4px);
 	    flex: 0 0 16.66666666666667%;
 	    max-width: 16.66666666666667%;
@@ -432,6 +434,7 @@ body::-webkit-scrollbar-thumb {
     }
 }
 .testimonials{
+    opacity: 0;
     padding-left: 5%;
     max-width: rem(855px);
     .quote{
@@ -546,6 +549,7 @@ body::-webkit-scrollbar-thumb {
 	    max-width: 14%;
 	}
 	h2{
+	    opacity: 0;
 	    color: $gray;
 	    font-size: rem(24px);
 	    text-align: center;
@@ -679,6 +683,7 @@ body::-webkit-scrollbar-thumb {
 	flex-wrap: wrap;
 	margin: 0 -4px;
 	.animationen-video{
+	    opacity: 0;
 	    flex: 0 0 25%;
 	    max-width: 25%;
 	    padding: 4px;
@@ -752,6 +757,7 @@ body::-webkit-scrollbar-thumb {
 	display: flex;
 	margin: 0 -4px;
 	.img-wrp{
+	    opacity: 0;
 	    padding: 4px;
 	    a{
 		position: relative;
@@ -794,7 +800,18 @@ body::-webkit-scrollbar-thumb {
 	    left: 0;
 	    color: $gray;
 	    transform: rotate(-90deg) translate(rem(-44px, -44px));
+	    h2{
+		opacity: 0;
+	    }
 	}
+    }
+}
+#home-2,
+#home-3,
+#design-2,
+#design-3{
+    .circles{
+	opacity: 0;
     }
 }
 #uber-uns-1{
