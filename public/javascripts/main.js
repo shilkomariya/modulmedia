@@ -115,17 +115,17 @@
 	dots: true,
 	items: 1
     });
-
-    $(window).scroll(function () {
-	$('#software-2 video').each(function () {
-	    if ($(this).visible(true)) {
-		$(this)[0].play();
-	    } else {
-		$(this)[0].pause();
-	    }
-	})
-    });
-
+    /*
+     $(window).on("load", function () {
+     $('#software-1 video').each(function () {
+     if ($(this).visible(true)) {
+     $(this)[0].play();
+     } else {
+     $(this)[0].pause();
+     }
+     })
+     });
+     */
     $(window).on("load resize", function () {
 	$('.equal-height').samesizr({
 	    mobile: 767

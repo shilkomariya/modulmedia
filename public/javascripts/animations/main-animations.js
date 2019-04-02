@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	    .to("#home-1 .section-heading", 1, {y: "0%", ease: Power4.easeOut}, "-=0.25")
 	    .to("#home-1 .description", 0.5, {y: "0%", ease: Power4.easeInOut})
 	    .staggerTo("#home-1 h2", .7, {y: "0%", ease: Power4.easeOut}, 0.2, "-=0.25")
-	    .staggerTo("#home-1 p", .5, {y: "0%", ease: Power4.easeOut}, 0.2, "-=0.25");
+	    .staggerTo("#home-1 p", .5, {y: "0%", ease: Power4.easeOut}, 0.2, "-=0.25")
+	    .to("#home-1 .next-slide", 0.5, {autoAlpha: 1, ease: Power4.easeInOut}, "-=0.5");
 
     // set circles timeline
     // separate it from main so it more readable

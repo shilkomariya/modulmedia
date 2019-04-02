@@ -9,9 +9,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // set intro animation timeline
     tl.to(".preloader", 1, {scaleX: 0, ease: Power4.easeInOut}).set(".preloader", {x: "-100%", scaleX: 1})
 	    .to("#software-1 .section-heading", 1.5, {y: "0%", ease: Power4.easeOut}, "-=0.25")
-	    .to("#software-1 .text h3", 1, {y: "0%", ease: Power4.easeOut}, "-=1")
+	    .to("#software-1 .embed-video-wrp", 1, {y: "0%", ease: Power4.easeOut}, "-=1")
 	    .to("#software-1 .logo", 1, {y: "0%", ease: Power4.easeOut}, "-=1")
-	    .to("#software-1 .next-slide", 0.5, {autoAlpha: 1, ease: Power4.easeInOut}, "-=0.5");
+	    .staggerTo("#software-1 .content p", .5, {y: "0%", ease: Power4.easeOut}, 0.2, "-=0.25");
 
 
     // animate circles and oncomplete run yoyo

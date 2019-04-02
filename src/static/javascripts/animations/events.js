@@ -42,64 +42,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
     for (var i = 0; i < navigationPart.length; i++) {
 	_loop(i);
     } // end of for loop
-
-    var windowHeight;
-    var windowWidth;
-    var mobileMenuSetuped = false;
-
-    // setup movile nav
-    var setUpMobileNav = function setUpMobileNav() {
-	windowHeight = window.innerHeight;
-	windowWidth = window.innerWidth;
-	// check if user on mobile
-	// so there will no events on desktop (free events memory)
-	if (windowWidth <= 760 && !mobileMenuSetuped) {
-	    // handle mobile menu navigation
-	    // declare variables
-	    var mobileMenuButton = document.getElementById("mobile-menu-button"),
-		    mobileOverlay = document.getElementById("mobile-overlay"),
-		    pageBlur = document.getElementById("page-blur"),
-		    headerNavigation = document.getElementById("header__navigation"),
-		    windowWidth = window.innerWidth,
-		    body = document.getElementsByTagName("body")[0];
-
-	    // create click event handlers
-	    mobileMenuButton.addEventListener("click", function () {
-		handleMenuClick();
-	    }); // end of mobileMenuOpen click
-
-	    mobileOverlay.addEventListener("click", function () {
-		handleMenuClick();
-	    }); // end of mobileMenuCloseButton click
-
-	    var handleMenuClick = function handleMenuClick(open) {
-		if (!body.classList.contains("menu-opened")) {
-		    // handle open
-		    mobileMenuButton.classList.add("opened");
-		    pageBlur.classList.add("blured");
-		    mobileOverlay.classList.add("opened");
-		    headerNavigation.classList.add("opened");
-		    body.classList.add("menu-opened");
-		    TweenMax.staggerTo(".header__navigation-part h1", 0.5, {y: "0%"}, 0.05);
-		} else {
-		    // handle close
-		    TweenMax.set(".header__navigation-part h1", {y: "-120%"});
-		    mobileMenuButton.classList.remove("opened");
-		    pageBlur.classList.remove("blured");
-		    mobileOverlay.classList.remove("opened");
-		    headerNavigation.classList.remove("opened");
-		    body.classList.remove("menu-opened");
-		}
-	    }; // end of handleMenuClick function
-	    mobileMenuSetuped = true;
-	} // end of check if mobile
-    }; // end of setUpMobileNav function
-    setUpMobileNav(); // call mobile nav first time page load
-    // add event on window resize so it will enable mobile nav
-    window.addEventListener("resize", function () {
-	setUpMobileNav();
-    }); // end of resize event handler
-
     function setHeaderClass() {
 	if ($.scrollify.current().hasClass("menu-light")) {
 	    $(".site-header").fadeOut('slow').addClass("light").fadeIn('slow');

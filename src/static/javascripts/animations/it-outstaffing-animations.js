@@ -131,5 +131,6 @@ function outstaffing3Animations() {
     var tl3 = new TimelineMax();
     // set intro animation timeline
     tl3.to("#outstaffing-3 .section-heading", .7, {y: "0%", ease: Power4.easeOut}, "-=0.25")
+	    .to("#outstaffing-3 .desc", .7, {y: "0%", ease: Power4.easeOut}, "-=0.25")
 	    .staggerTo("#outstaffing-3 .img-wrp", 1, {opacity: 1, ease: Power1.easeOut}, 0.3, "-=1");
 }
