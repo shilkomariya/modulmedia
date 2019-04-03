@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // set intro animation timeline
     tl.to(".preloader", 1, {scaleX: 0, ease: Power4.easeInOut}).set(".preloader", {x: "-100%", scaleX: 1})
 	    .to("#design-1 .section-heading", 1.5, {y: "0%", ease: Power4.easeOut}, "-=0.25")
-	    .to("#design-1 .left-title h2", 1, {opacity: 1, ease: Power1.easeOut}, "-=1")
+	    .to("#design-1 .desc", 1.5, {y: "0%", ease: Power4.easeOut}, "-=0.25")
 	    .staggerTo("#design-1 .animationen-video", 1, {opacity: 1, ease: Power1.easeOut}, 0.2, "-=1")
 
     if (window.innerWidth > 860) {
@@ -124,7 +124,7 @@ function design2Animations() {
     // set intro animation timeline
     tl2.to("#design-2 .section-heading", 1.5, {y: "0%", ease: Power4.easeOut}, "-=0.25")
 	    .to("#design-2 .circles", 1, {opacity: 1, ease: Power1.easeOut}, "-=1")
-	    .to("#design-2 .left-title h2", 1, {opacity: 1, ease: Power1.easeOut}, "-=1")
+	    .to("#design-2 .desc", 1.5, {y: "0%", ease: Power4.easeOut}, "-=0.25")
 	    .staggerTo("#design-2 .img-wrp", 1, {opacity: 1, ease: Power1.easeOut}, 0.2, "-=1")
 }
 function design3Animations() {
@@ -132,6 +132,6 @@ function design3Animations() {
     // set intro animation timeline
     tl3.to("#design-3 .section-heading", 1.5, {y: "0%", ease: Power4.easeOut}, "-=0.25")
 	    .to("#design-3 .circles", 1, {opacity: 1, ease: Power1.easeOut}, "-=1")
-	    .to("#design-3 .left-title h2", 1, {opacity: 1, ease: Power1.easeOut}, "-=1")
+	    .to("#design-3 .desc", 1.5, {y: "0%", ease: Power4.easeOut}, "-=0.25")
 	    .staggerTo("#design-3 .img-wrp", 1, {opacity: 1, ease: Power1.easeOut}, 0.2, "-=1")
 }
