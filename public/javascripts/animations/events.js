@@ -42,12 +42,35 @@ document.addEventListener("DOMContentLoaded", function (event) {
     for (var i = 0; i < navigationPart.length; i++) {
 	_loop(i);
     } // end of for loop
+
+    $.fn.removeClassWild = function (mask) {
+	return this.removeClass(function (index, cls) {
+	    var re = mask.replace(/\*/g, '\\S+');
+	    return (cls.match(new RegExp('\\b' + re + '', 'g')) || []).join(' ');
+	});
+    };
+
+
     function setHeaderClass() {
+	$(".site-header").fadeOut(1100);
 	if ($.scrollify.current().hasClass("menu-light")) {
-	    $(".site-header").fadeOut('slow').addClass("light").fadeIn('slow');
+	    $(".site-header").addClass("light");
 	} else {
-	    $(".site-header").fadeOut('slow').removeClass("light").fadeIn('slow');
+	    $(".site-header").removeClass("light");
 	}
+
+	$(".site-header").removeClassWild("bg-header-*");
+
+	var color = '';
+	color = $.scrollify.current().data("headerbg");
+	if (color) {
+	    $(".site-header").addClass('bg-header-' + color);
+	}
+	console.log(color);
+
+	$(".site-header").fadeIn('slow');
+    }
+    function setHeaderBg() {
     }
 
     function startSectionsAnimations() {
@@ -97,7 +120,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	    }
 	});
     });
-
 
 
 }); // end of DOMContentLoaded function

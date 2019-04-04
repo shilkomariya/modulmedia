@@ -97,6 +97,8 @@
 
 +function ($) {
 
+    $(".site-header").fadeOut('fast');
+
     $("#main-menu-btn").on("click", function () {
 	$(this).toggleClass('open');
 	$('body').toggleClass('open-menu');
