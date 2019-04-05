@@ -4,17 +4,45 @@
     <head>
 	<meta charset="utf-8">
 	<title>{% block title %}{{ title }}{% endblock %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="{{ description }}">
+	<meta name="keywords" content="{{ keywords }}">
+	<meta property="og:title" content="{{ title }}">
+	<meta property="og:description" content="{{ description }}">
+	<meta property="og:type" content="website">
+	<meta property="og:publisher" content="">
+	<meta property="og:image" content="https://modulmedia.info/images/covers/{{ cover }}">
+	<meta property="og:image:width" content="1920">
+	<meta property="og:image:height" content="1080">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{{ title }}">
+	<meta name="twitter:description" content="{{ description }}">
+	<meta name="twitter:image" content="https://modulmedia.info/images/covers/{{ cover }}">
+	<meta name="robots" content="index,follow">
+	<meta name="googlebot" content="index,follow">
+
+	{% include "shared/app-icons.html" %}
 	<link rel="stylesheet" href="stylesheets/app.css">
 	<link rel="stylesheet" href="stylesheets/jquery.fancybox.min.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	{% include "shared/app-icons.html" %}
 	{% block head %}{% endblock %}
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121097283-1"></script>
+	<script>
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+    dataLayer.push(arguments);
+}
+gtag('js', new Date());
+
+gtag('config', 'UA-121097283-1');
+	</script>
     </head>
     <body>
 	{% block content %}{% endblock %}
 	{% block javascript %}
 	<script
-	    src="http://code.jquery.com/jquery-3.3.1.min.js"
+	    src="https://code.jquery.com/jquery-3.3.1.min.js"
 	    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 	crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>

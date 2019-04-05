@@ -1,4 +1,13 @@
 {
     "message": "Blendid!",
-    "title": "Modul Media — Software, Development, Design!"
+    "title": "Modul Media — Software, Development, Design!",
+    "description": "Integrative Software, verlassliche IT-Entwicklung, faszinierende Grafiken und bewegende Animationenen",
+    "keywords": "Modul Media, Modul, Media, integrated audience, INA, graphic, infographic, animation design, web-development, development, front-end, back-end, news, video, photo, application",
+    "cover": "modul_media_cover_main.jpg",
+    "software-active": "",
+    "it-entwicklung-active": "",
+    "design-active": "",
+    "outstaffing-active": "",
+    "uber-uns-active": "",
+    "kontakt": ""
 }

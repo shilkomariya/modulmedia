@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     // set intro animation timeline
     tl.to(".preloader", 1, {scaleX: 0, ease: Power4.easeInOut}).set(".preloader", {x: "-100%", scaleX: 1})
 	    .to("#outstaffing-1 .section-heading", .7, {y: "0%", ease: Power4.easeOut}, "-=0.25")
-	    .staggerTo("#outstaffing-1 .sprite", .7, {y: "0%", ease: Power4.easeOut}, 0.2, "-=0.25")
+	    .staggerTo("#outstaffing-1 .image", .7, {y: "0%", ease: Power4.easeOut}, 0.2, "-=0.25")
 	    .staggerTo("#outstaffing-1 .content p", .7, {y: "0%", ease: Power4.easeOut}, 0.2, "-=0.25")
 	    .staggerTo("#outstaffing-1 h2", 1, {opacity: 1, ease: Power1.easeOut}, 0.2, "-=0.1")
 	    .to("#outstaffing-1 .next-slide", 0.5, {autoAlpha: 1, ease: Power4.easeInOut}, "-=0.5");

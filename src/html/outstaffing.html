@@ -4,6 +4,16 @@ Homepage: https://mozilla.github.io/nunjucks/
 Docs: https://mozilla.github.io/nunjucks/api.html
 #}
 
+{% set pagetitle = 'outstaffing' %}
+
+{% set title = 'Outstaffing — Modul Media' %}
+
+{% set description = 'Modul Media — Software, Development, Design' %}
+
+{% set keywords = '' %}
+
+{% set cover = 'modul_media_cover_animationen.jpg' %}
+
 {% extends 'layouts/application.html' %}
 
 {% block content %}
@@ -33,7 +43,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 			<div class="advantage">
 			    <div class="img">
 				<div class="animation">
-				    {{ sprite('progress') }}
+				    <img src="images/progress.svg" alt="progress" class="image">
 				</div>
 			    </div>
 			    <div class="content">
@@ -51,7 +61,7 @@ Docs: https://mozilla.github.io/nunjucks/api.html
 			<div class="advantage">
 			    <div class="img">
 				<div class="animation">
-				    {{ sprite('profits') }}
+				    <img src="images/profits.svg" alt="profits" class="image">
 				</div>
 			    </div>
 			    <div class="content">
