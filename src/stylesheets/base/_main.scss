@@ -278,7 +278,7 @@ svg path {
 	color: #B5B5B5;
 	padding-left: rem(70px);
 	position: relative;
-	&:before{
+	.line{
 	    position: absolute;
 	    left: 0;
 	    top: 50%;
@@ -286,7 +286,11 @@ svg path {
 	    height: 1px;
 	    width: rem(60px);
 	    display: block;
-	    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, #fff 100%);
+	    transform-origin:100% 100%;
+	    background: linear-gradient(90deg, rgba(#5D5F66, 0.1) 0%, #5D5F66 100%);
+	    .bg-red &{
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0%, #fff 100%);
+	    }
 	    .bg-beige &,
 	    .bg-gray &,
 	    .bg-gray-light &{

@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	if (color) {
 	    $(".site-header").addClass('bg-header-' + color);
 	}
-	console.log(color);
 
 	$(".site-header").fadeIn('slow');
     }
@@ -103,6 +102,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	}
     }
 
+    function setBorderTween() {
+	var tl = new TimelineMax({repeat: -1, repeatDelay: 0});
+	tl.to(".next-slide .line", 0.6, {scaleY: "0", ease: Power4.easeIn})
+		.set(".next-slide .line", {transformOrigin: "0% 0%"})
+		.to(".next-slide .line", 0.6, {scaleY: "1", ease: Power4.easeIn}, "+=0.9");
+
+	console.log("Line start");
+    }
 
     $(function () {
 	$.scrollify({
@@ -113,13 +120,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	    },
 	    afterRender: function () {
 		setHeaderClass();
-		startSectionsAnimations()
+		startSectionsAnimations();
 	    },
 	    after: function () {
 		startSectionsAnimations()
 	    }
 	});
     });
+    setBorderTween();
 
 
 }); // end of DOMContentLoaded function
